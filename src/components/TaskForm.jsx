@@ -1,11 +1,15 @@
 import { useState } from 'react';
 
-const TaskForm = () => {
+const TaskForm = ({onAdd}) => {
   const [taskName, setTaskName] = useState("");
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onAdd(taskName);
+    setTaskName('');
+  }
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <button>+</button>
         <input 
             type="text" 

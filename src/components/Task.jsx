@@ -1,11 +1,12 @@
+import Checkbox from "./Checkbox";
 
-const Task = () => {
+const Task = ({name,done}) => {
     return (
-        <div className="task">
-            <input type="checkbox"/>
-                HIBA SAFSAFY
-        </div>
-    )
+      <div className="task">
+        <Checkbox defaultChecked={done}/>
+        {name}
+      </div>
+    );
 }
 
 export default Task;
