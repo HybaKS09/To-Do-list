@@ -10,7 +10,7 @@ const TaskForm = ({ onAdd }) => {
     }
   }
   return (
-    <div>
+    <div className='form_wrapper'>
       <form onSubmit={handleSubmit}>
         <button>+</button>
         <input

@@ -11,7 +11,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="main">
       <TaskForm onAdd={addTask} />
       {tasks.map(task => (
         <Task key={task.id} {...task} />
