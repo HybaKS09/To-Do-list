@@ -3,7 +3,7 @@ const Task = () => {
     return (
         <div className="task">
             <input type="checkbox"/>
-                test task
+                HIBA SAFSAFY
         </div>
     )
 }
