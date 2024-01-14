@@ -10,27 +10,28 @@ function App() {
   useEffect(() => {
     if (tasks.length === 0) return;
     localStorage.setItem("tasks", JSON.stringify(tasks));
-  },[tasks]);
+  }, [tasks]);
 
   useEffect(() => {
-    const tasks = JSON.parse(localStorage.getItem('tasks'));
-    setTasks(tasks);
-  },[]);
+    const tasks_ = JSON.parse(localStorage.getItem('tasks')) || [];
+    setTasks(tasks_);
+  }, []);
 
   const addTask = (name) => {
     setTasks([...tasks, { id: Date.now(), name, done: false }])
   }
 
   //no comprendo 
-  const updateTaskDone = (taskId, newDone) => {
-    setTasks((prev) => {
-      const taskIndex = prev.findIndex((task) => task.id === taskId);
-
-      const newTasks = [...prev];
-      newTasks[taskIndex].done = newDone;
-      return newTasks;
-    });
+  const checkTask = (taskId) => {
+    const updatedTasks = tasks.map(task => {
+      if (task.id === taskId) {
+        return { ...task, done: !task.done }
+      }
+      return task
+    })
+    setTasks(updatedTasks)
   };
+
 
   const numberComplete = tasks.filter(t => t.done).length;
   const numberTotal = tasks.length;
@@ -46,7 +47,7 @@ function App() {
         <Task
           key={task.id}
           {...task}
-          onToggle={(done) => updateTaskDone(task.id, done)}
+          checkTask={checkTask}
         />
       ))}
     </div>
