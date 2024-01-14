@@ -49,13 +49,12 @@ div.task {
     width: 75%;
 }
 
-div.task svg {
+div.task svg{
     height: 20px;
     margin-right: 6px;
     fill: #61DAFB;
 }
-
-div.task.done {
+div.task.done{
     opacity: 0.3;
 }
 
