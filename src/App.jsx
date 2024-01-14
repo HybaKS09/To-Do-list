@@ -32,11 +32,14 @@ function App() {
     });
   };
 
-  //const numberC
+  const numberComplete = tasks.filter(t => t.done).length;
+  const numberTotal = tasks.length;
 
   return (
     <div className="main">
-      <h1>{}/10 complete</h1>
+      <h1>
+        {numberComplete}/{numberTotal} complete
+      </h1>
       <TaskForm onAdd={addTask} />
       {tasks.map((task) => (
         //no comprendo
