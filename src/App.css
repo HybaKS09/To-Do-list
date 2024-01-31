@@ -1,111 +1,113 @@
 body {
-    background-color: #17181f;
-    color: #ddd;
+  background-color: #17181f;
+  color: #ddd;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 main {
-    max-width: 300px;
-    margin: 20px auto;
+  max-width: 300px;
+  margin: 20px auto;
 }
 
 .form_wrapper {
-    width: 75%;
+  width: 50%;
 }
 
 form {
-    border: 3px solid #30313D;
-    border-radius: 10px;
-    padding: 5px;
-    display: flex;
+  border: 3px solid #30313d;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
 }
 
 form input[type="text"] {
-    background: none;
-    color: #fff;
-    border: 0;
-    padding: 0 8px;
-    display: block;
-    width: 100%;
+  background: none;
+  color: #fff;
+  border: 0;
+  padding: 0 8px;
+  display: block;
+  width: 100%;
 }
 
 form button {
-    background-color: #61DAFB;
-    border: 0;
-    border-radius: 6px;
-    cursor: pointer;
+  background-color: #61dafb;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 div.task {
-    background-color: #30313D;
-    border-radius: 10px;
-    padding: 5px 9px;
-    margin-top: 5px;
-    display: flex;
-    transition: opacity .3s linear;
-    width: 75%;
+  background-color: #30313d;
+  border-radius: 10px;
+  padding: 5px 9px;
+  margin-top: 5px;
+  display: flex;
+  transition: opacity 0.3s linear;
+  width: 50%;
 }
 
-div.task svg{
-    height: 20px;
-    margin-right: 6px;
-    fill: #61DAFB;
+div.task svg {
+  height: 20px;
+  margin-right: 6px;
+  fill: #61dafb;
 }
-div.task.done{
-    opacity: 0.3;
+div.task.done {
+  opacity: 0.3;
 }
 
 div.task-name,
 div.task form {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 div.task span {
-    position: relative;
+  position: relative;
 }
 
 div.task span:before {
-    content: '';
-    display: block;
-    width: 0;
-    height: 1px;
-    background-color: #ddd;
-    position: absolute;
-    top: 10px;
-    transition: width .1s linear;
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: #ddd;
+  position: absolute;
+  top: 10px;
+  transition: width 0.1s linear;
 }
 
 div.task.done span:before {
-    width: 100%;
+  width: 100%;
 }
 
 h1,
 h2 {
-    text-align: center;
+  text-align: center;
 }
 
 div.checkbox {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 button.trash {
-    background: none;
-    border: none;
-    display: flex;
-    cursor: pointer;
+  background: none;
+  border: none;
+  display: flex;
+  cursor: pointer;
 }
 
 button.trash svg {
-    fill: #888;
-    height: 14px;
+  fill: #888;
+  height: 14px;
 }
 
 div.task input {
-    border: 2px solid #555;
-    border-radius: 5px;
-    padding: 2px 4px;
+  border: 2px solid #555;
+  border-radius: 5px;
+  padding: 2px 4px;
 }

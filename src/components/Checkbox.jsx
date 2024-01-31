@@ -2,7 +2,14 @@ import { useState } from "react";
 
 const Checkbox = ({ checked = false, onClick }) => {
   return (
-    <div onClick={onClick}>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+      onClick={onClick}
+    >
       {!checked ? (
         <div className="checkbox unchecked">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">

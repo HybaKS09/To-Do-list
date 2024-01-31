@@ -8,7 +8,14 @@ const Task = ({ id, name, done, checkTask, onTrash, onRename }) => {
     <div className={`task ${done ? "done" : ""}`}>
       <Checkbox checked={done} onClick={() => checkTask(id)} />
       {!editMode ? (
-        <div className="task-name" onClick={() => setEditMode((prev) => !prev)}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center"
+          }}
+          className="task-name"
+          onClick={() => setEditMode((prev) => !prev)}
+        >
           <span>{name}</span>
         </div>
       ) : (

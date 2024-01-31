@@ -57,7 +57,7 @@ function App() {
     if (percentage >= 1 && percentage < 100){
       return "keep it going 💪🏼";
     }
-    return "Welcome to your AGENDA ! You can ad your tasks for today 📒";
+    return "Welcome to your AGENDA ! You can add your tasks for today 📒";
   };
 
   return (
